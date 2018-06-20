@@ -168,7 +168,7 @@ class CompressHTML_Plugin implements Typecho_Plugin_Interface {
                 }
             }
             $c = preg_replace('/[\\n\\r\\t]+/', ' ', $c); // 清除换行符，清除制表符
-            $c = preg_replace('/\\s{2,}/', ' ', $c); // 清除额外的空格
+            $c = preg_replace('/\\s{3,}/', ' ', $c); // 清除额外的空格
             $c = preg_replace('/>\\s</', '> <', $c); // 清除标签间的空格
             $c = preg_replace('/\\/\\*.*?\\*\\//i', '', $c); // 清除 CSS & JS 的注释
             $c = preg_replace('/<!--[^!]*-->/', '', $c); // 清除 HTML 的注释
